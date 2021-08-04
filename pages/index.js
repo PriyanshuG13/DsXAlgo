@@ -1,10 +1,12 @@
 import React from "react";
-import Head from 'next/head';
-import '../styles/globals.css';
+import Navbar from "../components/navbar/navbar";
+import Footer from "../components/footer/footer";
 
-
-function HomePage() {
-  return <div>Welcome to Next.js!</div>
+export default function HomePage() {
+  return(
+    <div>
+        <Navbar/>
+        <Footer/>
+    </div>
+  );
 }
-
-export default HomePage

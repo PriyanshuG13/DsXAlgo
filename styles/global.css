@@ -1,0 +1,35 @@
+html,
+body {
+    background: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    scroll-behavior: smooth;
+    margin-top: 1vw;
+}
+
+body::-webkit-scrollbar {
+    width: 0.5vw;
+    height: 0.5vw
+}
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0.5vw;
+    background-color: #060c21;
+}
+body::-webkit-scrollbar-thumb {
+    background: dodgerblue;
+    border-radius: 0.5vw;
+}
+body::-webkit-scrollbar-thumb:hover {
+    background: orangered;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
