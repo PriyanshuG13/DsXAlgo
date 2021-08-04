@@ -1,0 +1,20 @@
+{
+  "name": "dsxalgo",
+  "version": "1.0.0",
+  "description": "A Data Structure and Algorithm Visualizer.",
+  "main": "./pages/index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^11.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
