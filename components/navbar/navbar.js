@@ -3,13 +3,14 @@ import Head from "next/head";
 import Link from 'next/link'
 import styles from "./navbar.module.css";
 
-export default function Navbar() {
+export default function Navbar(props) {
     return(
         <div>
             <Head>
+                <link rel="icon" href="/logo.png"/>
                 <title>DsXAlgo</title>
             </Head>
-            <div className={styles.navBar}>
+            <div className={styles.navBar} style={props.style}>
                 <div className={styles.navHeader}>
                     Data Structures and Algorithms
                 </div>

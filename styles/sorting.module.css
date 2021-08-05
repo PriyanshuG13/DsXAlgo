@@ -1,0 +1,17 @@
+.visualizer{
+    display: grid;
+    place-items: center;
+    grid-template-rows: auto auto;
+    margin: 1vw;
+}
+
+.visualizer canvas{
+    background-color: #060c21;
+    margin: 1vw;
+    width: 90vw;
+    border-radius: 1vw;
+}
+
+.visualizer .controller{
+    background-color: #060c21;
+}

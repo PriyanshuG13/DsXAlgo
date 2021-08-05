@@ -1,0 +1,30 @@
+.controllerLayout{
+    display: grid;
+    width: 90%;
+    padding: 1vw;
+    grid-template-columns: auto auto auto auto;
+    border-radius: 0.5vw;
+    grid-gap: 1vw;
+    background-color: dodgerblue;
+}
+
+.controllerLayout button{
+    font-size: large;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background-color: mediumpurple;
+}
+
+.speedSlider{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-gap: 0.5vw;
+    place-items: center;
+    padding: 0.5vw;
+}
+
+.speedSlider label{
+    color: white;
+    font-size: large;
+}
