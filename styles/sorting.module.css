@@ -6,12 +6,17 @@
 }
 
 .visualizer canvas{
-    background-color: #060c21;
+    background-color: dodgerblue;
     margin: 1vw;
-    width: 90vw;
     border-radius: 1vw;
 }
 
 .visualizer .controller{
-    background-color: #060c21;
+    display: grid;
+    width: 90%;
+    padding: 1vw;
+    grid-template-columns: auto auto auto auto;
+    border-radius: 0.5vw;
+    grid-gap: 1vw;
+    background-color: dodgerblue;
 }
