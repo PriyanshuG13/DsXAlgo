@@ -24,7 +24,7 @@
 }
 
 .leftContainer label, .rightContainer label{
-    font-size: x-large;
+    font-size: 1.6vw;
     color: white;
     text-decoration: underline;
     text-align: center;
@@ -32,7 +32,7 @@
 }
 
 .leftContainer label:hover, .rightContainer label:hover{
-    font-size: xx-large;
+    font-size: 1.8vw;
 }
 
 .demoVisualizer{
@@ -50,6 +50,9 @@
 
 
 
-/*@media (min-width: 1400px) {*/
-/*    */
-/*}*/
+@media (max-width: 1000px) {
+    .homePageBody{
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+    }
+}

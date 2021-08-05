@@ -10,7 +10,7 @@
 }
 
 .navBar .navHeader{
-    font-size: 40px;
+    font-size: 3vw;
     color: white;
     font-weight: bold;
     margin: 5px 0;
@@ -34,7 +34,7 @@
 }
 
 .navBar .menu .options{
-    font-size: larger;
+    font-size: 1.5vw;
     color: white;
     padding: 0.25%;
     margin-left: 1%;

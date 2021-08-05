@@ -9,7 +9,7 @@
 }
 
 .controllerLayout button{
-    font-size: large;
+    font-size: 1.2vw;
     border-radius: 10px;
     border: none;
     color: white;
@@ -26,5 +26,5 @@
 
 .speedSlider label{
     color: white;
-    font-size: large;
+    font-size: 1.2vw;
 }
