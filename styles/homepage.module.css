@@ -8,7 +8,7 @@
 
 .leftContainer, .rightContainer{
     display: grid;
-    grid-template-rows: 2vw auto auto;
+    grid-template-rows: 1.5vw auto auto;
     grid-gap: 1vw;
     padding: 1vw;
     border-radius: 15px;
