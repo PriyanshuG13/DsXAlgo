@@ -1,4 +1,4 @@
-.navBar{
+.navBar {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -9,7 +9,7 @@
     background-color: mediumpurple;
 }
 
-.navBar .navHeader{
+.navBar .navHeader {
     font-size: 3vw;
     color: white;
     font-weight: bold;
@@ -17,12 +17,12 @@
     font-family: Courier, monospace;
 }
 
-.navBar .navPart{
+.navBar .navPart {
     width: 95%;
     border: white 1px solid;
 }
 
-.navBar .menu{
+.navBar .menu {
     display: flex;
     flex-direction: row;
     list-style: none;
@@ -33,7 +33,7 @@
     padding: 0.5%;
 }
 
-.navBar .menu .options{
+.navBar .menu .options {
     font-size: 1.3vw;
     color: white;
     padding: 0.25%;
@@ -41,7 +41,7 @@
     margin-right: 1%;
 }
 
-.navBar .menu .options:hover{
+.navBar .menu .options:hover {
     font-weight: bold;
     border-bottom: white 2px solid;
 }

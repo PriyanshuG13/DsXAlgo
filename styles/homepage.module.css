@@ -1,4 +1,4 @@
-.homePageBody{
+.homePageBody {
     display: grid;
     grid-template-columns: 45vw 45vw;
     grid-template-rows: 41.75vw;
@@ -6,7 +6,7 @@
     margin: 1vw 3vw;
 }
 
-.leftContainer, .rightContainer{
+.leftContainer, .rightContainer {
     display: grid;
     grid-template-rows: 1.5vw auto auto;
     grid-gap: 1vw;
@@ -16,14 +16,14 @@
     background-color: cornflowerblue;
 }
 
-.leftContainer{
+.leftContainer {
 }
 
-.rightContainer{
+.rightContainer {
 
 }
 
-.leftContainer label, .rightContainer label{
+.leftContainer label, .rightContainer label {
     font-size: 1.6vw;
     color: white;
     text-decoration: underline;
@@ -31,27 +31,26 @@
     font-family: Courier, fantasy;
 }
 
-.leftContainer label:hover, .rightContainer label:hover{
+.leftContainer label:hover, .rightContainer label:hover {
     font-size: 1.8vw;
 }
 
-.demoVisualizer{
+.demoVisualizer {
     height: 100%;
     border-radius: 10px;
     padding: 0.5vw;
     background-color: white;
 }
 
-.demoVisualizer:hover{
+.demoVisualizer:hover {
     transform: scale(1.1, 1.1);
     border: black 1px solid;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
 }
 
 
-
 @media (max-width: 1000px) {
-    .homePageBody{
+    .homePageBody {
         grid-template-columns: auto;
         grid-template-rows: auto auto;
     }

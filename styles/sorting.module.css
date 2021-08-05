@@ -1,17 +1,17 @@
-.visualizer{
+.visualizer {
     display: grid;
     place-items: center;
     grid-template-rows: auto auto;
     margin: 1vw;
 }
 
-.visualizer canvas{
+.visualizer canvas {
     background-color: dodgerblue;
     margin: 1vw;
     border-radius: 1vw;
 }
 
-.visualizer .controller{
+.visualizer .controller {
     display: grid;
     width: 90%;
     padding: 1vw;

@@ -3,7 +3,7 @@ import Navbar from "../../../components/navbar/navbar";
 import Footer from "../../../components/footer/footer";
 
 export default function Array() {
-    return(
+    return (
         <div>
             <Navbar/>
             <ArrayVisualizer/>
@@ -13,16 +13,16 @@ export default function Array() {
     );
 }
 
-function ArrayVisualizer(){
-    return(
+function ArrayVisualizer() {
+    return (
         <div>
             Array Visualizer
         </div>
     );
 }
 
-function ArrayVisualizerControls(){
-    return(
+function ArrayVisualizerControls() {
+    return (
         <div>
             Array Visualizer Controls
         </div>

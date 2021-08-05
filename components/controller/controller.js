@@ -12,7 +12,7 @@ export default function Controller(props) {
     };
 
     function ValueLabelComponent(props) {
-        const { children, open, value } = props;
+        const {children, open, value} = props;
 
         return (
             <Tooltip open={open} enterTouchDelay={0} placement="top" title={value}>
@@ -27,7 +27,7 @@ export default function Controller(props) {
         value: PropTypes.number.isRequired,
     };
 
-    return(
+    return (
         <div className={styles.controllerLayout}>
             <button onClick={props.play}>Play</button>
             <button onClick={props.pause}>Pause</button>
@@ -36,7 +36,7 @@ export default function Controller(props) {
                 <label>Speed:</label>
                 <Slider value={value} onChange={handleChange}
                         ValueLabelComponent={ValueLabelComponent}
-                        aria-labelledby="custom thumb label" />
+                        aria-labelledby="custom thumb label"/>
             </div>
         </div>
     );

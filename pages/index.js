@@ -5,18 +5,18 @@ import Navbar from "../components/navbar/navbar";
 import Footer from "../components/footer/footer";
 
 export default function HomePage() {
-  return(
-    <div>
-        <Navbar/>
-        <HomePageBody/>
-        <Footer/>
-    </div>
-  );
+    return (
+        <div>
+            <Navbar/>
+            <HomePageBody/>
+            <Footer/>
+        </div>
+    );
 }
 
 
-function HomePageBody(){
-    return(
+function HomePageBody() {
+    return (
         <div className={styles.homePageBody}>
             <div className={styles.leftContainer}>
                 <Link href="/data_structures"><label>Data Structures</label></Link>

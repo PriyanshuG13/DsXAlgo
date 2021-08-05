@@ -9,13 +9,13 @@ export default function Sorting() {
     const [paused, setPause] = React.useState(false);
     const [play, setPlay] = React.useState(true);
 
-    const pause = () =>{
-        if(!paused){
+    const pause = () => {
+        if (!paused) {
             setPause(true)
         }
     }
 
-    return(
+    return (
         <div>
             <Navbar/>
             <div className={styles.visualizer}>
@@ -28,8 +28,8 @@ export default function Sorting() {
     );
 }
 
-function VisualizerController(){
-    return(
+function VisualizerController() {
+    return (
         <div className={styles.controller}>
             Sorting Visualizer Controls
         </div>

@@ -4,7 +4,7 @@ import Link from 'next/link'
 import styles from "./navbar.module.css";
 
 export default function Navbar(props) {
-    return(
+    return (
         <div>
             <Head>
                 <link rel="icon" href="/logo.png"/>
