@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "/styles/linked_list.module.css";
+// import styles from "/styles/linked_list.module.css";
 import Navbar from "/components/navbar/navbar";
 import Footer from "/components/footer/footer";
 import Controller from "/components/controller/controller";
