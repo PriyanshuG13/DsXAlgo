@@ -1,6 +1,6 @@
 import React, {useEffect, useRef, useState} from "react";
 
-export function Animation(props) {
+export default function Animation(props) {
     const [once, setOnce] = useState(true)
     const canvasBackgroundRef = useRef(null);
     const canvasSwapRef = useRef(null);
