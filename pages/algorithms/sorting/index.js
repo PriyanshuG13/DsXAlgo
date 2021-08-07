@@ -6,22 +6,15 @@ import Footer from "../../../components/footer/footer";
 import Controller from "../../../components/controller/controller";
 
 export default function Sorting() {
-    const [paused, setPause] = React.useState(false);
     const canvasRef = useRef(null);
     let canvas, context, barsArray
-
-    const pause = () => {
-        if (!paused) {
-            setPause(true)
-        }
-    }
 
     useEffect(() => {
         canvas = canvasRef.current
         context = canvas.getContext('2d')
         barsArray = generateBars(context)
-        Animation(context, barsArray, paused)
-    },[Animation])
+        Animation(context, barsArray)
+    })
 
     return (
         <div>
@@ -29,7 +22,7 @@ export default function Sorting() {
             <div className={styles.visualizer}>
                 <VisualizerController/>
                 <canvas ref={canvasRef} width="1350" height="600"/>
-                <Controller pause={pause}/>
+                <Controller/>
             </div>
             <Footer/>
         </div>
@@ -56,7 +49,7 @@ function generateBars(ctx) {
             x: gap,
             y: ctx.canvas.height - height - 30,
             color: "black",
-            altColor: "red",
+            altColor: "deepskyblue",
             valueObject: {
                 value: parseInt(`${height / 10}`),
                 x: gap + 5,

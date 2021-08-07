@@ -1,23 +1,25 @@
 import React from "react";
 
-export function Animation(context, barsArray, paused) {
+export function Animation(context, barsArray) {
     let animationFrameId, bar1, bar2
     let i = 0
 
     function swapAnimation() {
-        if (paused) {}
-        else if (i !== 30) {
-            swapAnimationFrame(context, bar1, bar2, i++)
-            animationFrameId = window.requestAnimationFrame(swapAnimation)
+        // if (false) {} else
+        if (i !== bar2.x-bar1.x) {
+            swapAnimationFrame(context, bar1, bar2, i);
+            i += 1
+            animationFrameId = window.requestAnimationFrame(swapAnimation);
         } else {
-            i = 0
-            swap(bar1, bar2)
-            colorChange(context, bar1, bar2)
+            i = 0;
+            swap(bar1, bar2);
+            colorChange(context, bar1, bar2);
         }
     }
 
     function colorChange(ctx, bar1, bar2) {
-        ctx.clearRect(bar1.x - 1, 0, bar2.x - bar1.x + 21, ctx.canvas.height)
+        ctx.clearRect(bar1.x - 1, 0, 22, ctx.canvas.height)
+        ctx.clearRect(bar2.x - 1, 0, 22, ctx.canvas.height)
         ctx.fillStyle = bar1.color;
         ctx.fillRect(bar1.x, bar1.y, bar1.width, bar1.height);
         ctx.fillRect(bar2.x, bar2.y, bar2.width, bar2.height);
@@ -26,7 +28,8 @@ export function Animation(context, barsArray, paused) {
     }
 
     function swapAnimationFrame(ctx, bar1, bar2, i) {
-        ctx.clearRect(bar1.x - 1, 0, bar2.x - bar1.x + 21, ctx.canvas.height)
+        ctx.clearRect(bar1.x - 1, 0, 30, ctx.canvas.height)
+        ctx.clearRect(bar2.x - 1, 0, 30, ctx.canvas.height)
         ctx.fillStyle = bar1.altColor;
         ctx.fillRect(bar1.x + i, bar1.y, bar1.width, bar1.height);
         ctx.fillRect(bar2.x - i, bar2.y, bar2.width, bar2.height);

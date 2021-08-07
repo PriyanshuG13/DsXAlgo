@@ -6,6 +6,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 
 export default function Controller(props) {
     const [value, setValue] = React.useState(30);
+    const [paused, setPause] = React.useState(false);
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
@@ -27,10 +28,12 @@ export default function Controller(props) {
         value: PropTypes.number.isRequired,
     };
 
+    const playPause = () => setPause(!paused)
+
     return (
         <div className={styles.controllerLayout} style={props.style}>
-            <button onClick={props.play}>Play</button>
-            <button onClick={props.pause}>Pause</button>
+            {paused ? <button onClick={playPause}>Play</button>
+                    : <button onClick={playPause}>Pause</button>}
             <button onClick={props.stop}>Stop</button>
             <div className={styles.speedSlider}>
                 <label>Speed:</label>
