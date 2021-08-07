@@ -1,6 +1,6 @@
 import React, {useEffect, useRef} from "react";
 import styles from "/styles/sorting.module.css";
-import {Animation} from "./Animation";
+import Animation from "./Animation";
 import Navbar from "/components/navbar/navbar";
 import Footer from "/components/footer/footer";
 import Controller from "/components/controller/controller";
