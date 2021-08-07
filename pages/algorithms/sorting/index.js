@@ -55,13 +55,15 @@ function generateBars(ctx) {
             width: 20,
             x: gap,
             y: ctx.canvas.height - height - 30,
+            color: "black",
+            altColor: "red",
             valueObject: {
                 value: parseInt(`${height / 10}`),
                 x: gap + 5,
                 y: ctx.canvas.height - 15
             }
         }
-        ctx.fillStyle = "black";
+        ctx.fillStyle = barObject.color;
         ctx.fillRect(barObject.x, barObject.y, barObject.width, barObject.height);
         ctx.fillText(barObject.valueObject.value.toString(), barObject.valueObject.x, barObject.valueObject.y);
         bars.push(barObject);

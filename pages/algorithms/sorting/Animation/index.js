@@ -12,11 +12,22 @@ export function Animation(context, barsArray, paused) {
         } else {
             i = 0
             swap(bar1, bar2)
+            colorChange(context, bar1, bar2)
         }
+    }
+
+    function colorChange(ctx, bar1, bar2) {
+        ctx.clearRect(bar1.x - 1, 0, bar2.x - bar1.x + 21, ctx.canvas.height)
+        ctx.fillStyle = bar1.color;
+        ctx.fillRect(bar1.x, bar1.y, bar1.width, bar1.height);
+        ctx.fillRect(bar2.x, bar2.y, bar2.width, bar2.height);
+        ctx.fillText(bar1.valueObject.value.toString(), bar1.valueObject.x, bar1.valueObject.y);
+        ctx.fillText(bar2.valueObject.value.toString(), bar2.valueObject.x, bar2.valueObject.y);
     }
 
     function swapAnimationFrame(ctx, bar1, bar2, i) {
         ctx.clearRect(bar1.x - 1, 0, bar2.x - bar1.x + 21, ctx.canvas.height)
+        ctx.fillStyle = bar1.altColor;
         ctx.fillRect(bar1.x + i, bar1.y, bar1.width, bar1.height);
         ctx.fillRect(bar2.x - i, bar2.y, bar2.width, bar2.height);
         ctx.fillText(bar1.valueObject.value.toString(), bar1.valueObject.x + i, bar1.valueObject.y);
