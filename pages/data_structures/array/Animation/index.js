@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import styles from '/styles/array.module.css';
-import {Animations} from './Animation.js';
+import Animations from './Animation.js';
 
 let array = [" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "];
 

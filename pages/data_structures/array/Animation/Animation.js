@@ -1,6 +1,6 @@
 import styles from '/styles/array.module.css';
 
-export function Animations(sel,idx,dif) {
+export default function Animations(sel,idx,dif) {
     const boxVal = document.getElementById(`Val${idx}`);
     const boxRemove = document.getElementById(styles.valRemove);
     const boxMove = document.getElementById(styles.valMove);
