@@ -4,7 +4,7 @@ import {Animations} from './Animation.js';
 
 let array = [" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "];
 
-class Animation extends Component {
+export class Animation extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -158,5 +158,3 @@ class Animation extends Component {
 function randomIntFromInterval(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
-
-export default Animation;
