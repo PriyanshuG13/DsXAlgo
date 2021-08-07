@@ -2,7 +2,7 @@
     display: grid;
     width: 90%;
     padding: 1vw;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto auto auto;
     border-radius: 0.5vw;
     grid-gap: 1vw;
     background-color: dodgerblue;
