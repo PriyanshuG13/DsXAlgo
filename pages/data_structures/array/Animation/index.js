@@ -4,7 +4,7 @@ import {Animations} from './Animation.js';
 
 let array = [" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "];
 
-export class Animation extends Component {
+export default class Animation extends Component {
     constructor(props) {
         super(props);
         this.state = {
