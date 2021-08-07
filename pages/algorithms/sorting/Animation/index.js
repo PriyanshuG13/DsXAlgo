@@ -10,33 +10,30 @@ export default function Visualizer(props) {
         const context = canvas.getContext('2d')
         let animationFrameId
         let barsArray = generateBars(context)
-        console.log(barsArray)
         let i = 0
         let bar1, bar2
 
         const swapAnimation = () => {
-            if (paused) {
-                return;
-            }
-            swapAnimationFrame(context, bar1, bar2, i++)
-            if (i !== 30) {
+            if (paused) {}
+            else if (i !== 30) {
+                console.log("animation:",bar1, bar2)
+                swapAnimationFrame(context, bar1, bar2, i++)
                 animationFrameId = window.requestAnimationFrame(swapAnimation)
             } else {
                 i = 0
             }
         }
-        // if(bar1.valueObject.value > bar2.valueObject.value) {
-        //     render()
-        // }
 
-        for (let i = 0; i < 10; ++i) {
-            setTimeout(() => {
+        for (let i = 0; i < 2; ++i) {
+            setTimeout(async () => {
                 bar1 = barsArray[i]
                 bar2 = barsArray[i + 1]
-                swapAnimation()
+                await swapAnimation()
+                console.log("Before:",bar1, bar2)
+                await swap(bar1, bar2)
+                console.log("After:",bar1, bar2)
             }, i * 1000);
         }
-
 
         return () => {
             window.cancelAnimationFrame(animationFrameId)
@@ -82,10 +79,12 @@ const swapAnimationFrame = (ctx, bar1, bar2, i) => {
     ctx.fillText(bar2.valueObject.value.toString(), bar2.valueObject.x - i, bar2.valueObject.y);
 }
 
-// const swap = (arr, i, j) => {
-//     const temp = {height: arr[i]['height'], value: arr[i].valueObject.value}
-//     arr[i]['height'] = arr[j].height
-//     arr[i]['valueObject']['value'] = arr[j].valueObject.value
-//     arr[j]['height'] = temp.height
-//     arr[j]['valueObject']['value'] = temp.value
-// }
+const swap = (bar1, bar2) => {
+    const temp = {height: bar1.height, y: bar1.y, value: bar1.valueObject.value}
+    bar1.height = bar2.height
+    bar1.y = bar2.y
+    bar1.valueObject.value = bar2.valueObject.value
+    bar2.height  = temp.height
+    bar2.y  = temp.y
+    bar2.valueObject.value = temp.value
+}

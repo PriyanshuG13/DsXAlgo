@@ -24,10 +24,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/algorithms/sorting": [
+    "/data_structures/array": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/algorithms/sorting.js"
+      "static/chunks/pages/data_structures/array.js"
+    ],
+    "/data_structures/linked_list": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/data_structures/linked_list.js"
     ]
   },
   "ampFirstPages": []

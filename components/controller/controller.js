@@ -28,7 +28,7 @@ export default function Controller(props) {
     };
 
     return (
-        <div className={styles.controllerLayout}>
+        <div className={styles.controllerLayout} style={props.style}>
             <button onClick={props.play}>Play</button>
             <button onClick={props.pause}>Pause</button>
             <button onClick={props.stop}>Stop</button>
