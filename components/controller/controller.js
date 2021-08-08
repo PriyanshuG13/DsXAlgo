@@ -29,7 +29,7 @@ export default function Controller(props) {
             {props.paused ? <button onClick={props.playPause}>Play</button>
                     : <button onClick={props.playPause}>Pause</button>}
             <button onClick={props.stop}>Forward</button>
-            <button onClick={props.stop}>Stop</button>
+            <button onClick={() => location.reload()}>Stop</button>
             <button onClick={props.stop}>Finish</button>
             <div className={styles.speedSlider}>
                 <label>Speed:</label>

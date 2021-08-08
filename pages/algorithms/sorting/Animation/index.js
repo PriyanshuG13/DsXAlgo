@@ -2,29 +2,48 @@ import React, {useEffect, useRef, useState} from "react";
 
 export default function Animation(props) {
     const [once, setOnce] = useState(true)
+    const [barsArray, setArray] = useState([])
     const canvasBackgroundRef = useRef(null);
     const canvasSwapRef = useRef(null);
-    const {paused, value} = props
+    const {paused, value, sort, generateNew} = props
     let canvasBackground, canvasSwap, contextBackground,contextSwap
-    let animationFrameId, bar1, bar2, barsArray, length, speed
+    let animationFrameId, bar1, bar2, length, speed
     let i = 0
 
+    const sortSelecter = () => {
+        if(!paused){
+            if(sort === 1){
+                bubbleSort()
+            } else if(sort === 2){
+                console.log("Insertion Sort")
+            } else if(sort === 3){
+                console.log("Selection Sort")
+            } else if(sort === 4){
+                console.log("Quick Sort")
+            } else if(sort === 5){
+                console.log("Merge Sort")
+            } else if(sort === 6){
+                console.log("Heap Sort")
+            }
+        }
+    }
+
     useEffect(() => {
+        canvasBackground = canvasBackgroundRef.current
+        canvasSwap = canvasSwapRef.current
+        contextBackground = canvasBackground.getContext('2d')
+        contextSwap = canvasSwap.getContext('2d')
         if(once){
             setOnce(false)
-            canvasBackground = canvasBackgroundRef.current
-            canvasSwap = canvasSwapRef.current
-            contextBackground = canvasBackground.getContext('2d')
-            contextSwap = canvasSwap.getContext('2d')
-            barsArray = generateBars(contextBackground)
-            length = barsArray.length
+            setArray(generateBars(contextBackground))
         }
+        length = barsArray.length
         speed = value
-        bubbleSort()
+        sortSelecter()
         return()=>{
             window.cancelAnimationFrame(animationFrameId)
         }
-    }, [paused, value])
+    }, [paused, value, sort])
 
     function bubbleSort(){
         for (let i = 0; i < length - 1; ++i){
