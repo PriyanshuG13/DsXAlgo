@@ -1,0 +1,142 @@
+.full {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    margin-top: 6vw;
+}
+
+.array_container {
+    width: 80%;
+    height: 600px;
+    position: absolute;
+    left:10%;
+    background-color: lightblue;
+    padding-top: 5px;
+    border: lightskyblue solid 20px;
+}
+
+.array_bar{
+    width: 14.3%;
+    display: inline-block;
+    position: relative;
+    margin: 20px;
+    background-color: dodgerblue;
+}
+
+@keyframes moveLeft{
+    from{left:0}
+    to{left:206px}
+}
+@keyframes moveRight{
+    from{right:0}
+    to{right:206px}
+}
+
+.full button {
+    margin-top: 10px;
+    border-radius: 4px;
+    background-color: dodgerblue;
+    border: none;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.full button:hover {
+    background-color: #ccc;
+}
+
+.full button.active {
+    background-color: #ccc;
+}
+.hero {
+    background-size: cover;
+    padding: 2rem 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    align-items: center;
+}
+
+.hero > * {
+    color: white;
+}
+
+.hero > h1 {
+    font-size: 4rem;
+    padding-bottom: 1rem;
+}
+
+/* breweries styles */
+.breweries {
+    padding: 1rem;
+}
+
+.breweries > ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1rem;
+}
+
+.breweries > ul > li {
+    list-style-type: none;
+    border: 1px solid #E2E2E2;
+    border-radius: .5rem;
+}
+
+/*
+.breweries > ul > li > figure {
+    max-height: 200px;
+    overflow: hidden;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    position: relative;
+}
+
+.breweries > ul > li > figure > img {
+    width: 100%;
+}
+
+.breweries > ul > li > figure > figcaption {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0,0,0,.7);
+    width: 100%;
+}
+
+.breweries > ul > li > figure > figcaption > h3 {
+    color: white;
+    padding: .75rem;
+    font-size: 1.25rem;
+}
+*/
+.breweries > ul > li > h2 {
+    padding: 0.3rem .75rem;
+    color: #666666;
+}
+
+.breweries > ul > li > p {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 0.3rem .75rem;
+    color: #666666;
+}
+
+.breweries > ul > li > a {
+    padding: .5rem 1rem;
+    margin: .5rem;
+}
+
+.breweries > ul > li > a {
+    background-color: goldenrod;
+    text-decoration: none;
+    color: white;
+    border-radius: .25rem;
+    text-align: center;
+    display: inline-block;
+    transition: all .3s;
+}
+
+.breweries > ul > li > a:hover {
+    opacity: .6;
+}
+

@@ -1,0 +1,169 @@
+.visualizer {
+    display: grid;
+    place-items: center;
+    grid-template-rows: auto auto auto;
+    margin: 1vw;
+}
+
+.visualizer .animationContainer {
+    display: grid;
+    width: 100%;
+    height: 35vw;
+    padding: 1vw;
+}
+
+.visualizer .controller {
+    display: grid;
+    width: 60%;
+    padding: 1vw;
+    place-self: center;
+    grid-template-columns: auto auto auto auto auto;
+    border-radius: 0.5vw;
+    grid-gap: 1vw;
+}
+
+.visualizer .controller .CloudW{
+    display: grid;
+    place-items: center;
+    width: 8.2vw;
+    height: 4.25vw;
+    color: dodgerblue;
+    font-size:1.26vw;
+    font-family: "Courier", serif;
+    cursor: pointer;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    outline: none;
+    background-size: 100%;
+}
+
+/*.CloudW:hover {
+    zoom: 110%;
+}*/
+
+.CloudW input{
+    display: grid;
+    place-self: center;
+    width: 4vw;
+    color: dodgerblue;
+    font-size:1.26vw;
+    cursor: pointer;
+    margin-top: 1.5vw;
+    border-radius: 0.25vw;
+    border: solid 0.01vw black;
+    outline: none;
+}
+
+.visualizer .animationContainer .animation {
+    width: 100%;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    background-color: white;
+}
+
+.visualizer .animationContainer .animation .anime {
+    width: 100%;
+    margin-top: 1%;
+    height: 9.7vw;
+    border-bottom: dashed 0.2vw whitesmoke;
+    border-top: solid white 1.5vw;
+    animation: MoveBG 14s infinite ease-in-out 6s;
+}
+
+._container2{
+    background: white;
+    border-radius: 20px;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    height: 100%;
+    align-items: center;
+    position: relative;
+}
+
+@keyframes MoveBG {
+    0%{background-position: 0 bottom}
+    100%{background-position: 402.7vw bottom}
+}
+
+.train_head{
+    width: 8.05vw;
+    height: 3.4vw;
+    color: dodgerblue;
+    padding-top: 1.22vw;
+    font-size:1.14vw;
+    font-family: "Courier", serif;
+    display: inline-block;
+    position:relative;
+    background-size: 100%;
+    animation: moveTrain 10s 1;
+}
+.train_tail{
+    width: 3.45vw;
+    height: 3.4vw;
+    color: dodgerblue;
+    padding-top: 1.32vw;
+    font-size:1.08vw;
+    font-family: "Courier", serif;
+    display: inline-block;
+    position:relative;
+    background-size: 100%;
+    animation: moveTrain 10s 1;
+}
+
+.train_car{
+    width: 8.2vw;
+    height: 3.4vw;
+    color: dodgerblue;
+    padding-top: 1.05vw;
+    font-size:1.36vw;
+    font-family: "Courier", serif;
+    display: inline-block;
+    position:relative;
+    background-size: 100%;
+    animation: hideT 1s 1;
+}
+
+/*.train_car span{
+    border-top: solid 3px grey;
+    border-left: solid 3px grey;
+    border-right: solid 3px grey;
+}
+.train_car :hover {
+    zoom: 120%;
+}*/
+
+@keyframes moveTrain {
+    from{left:100vw;}
+    to{left:0vw;}
+}
+
+@keyframes hideT {
+    0%{opacity: 0}
+    10%{opacity: 0}
+    11%{opacity: 1}
+    100%{opacity: 1}
+}
+
+.heli_train{
+    width: 8.2vw;
+    height: 3.29vw;
+    color: dodgerblue;
+    padding-top: 1.05vw;
+    font-size:1.36vw;
+    font-family: "Courier", serif;
+    display: inline-block;
+    position:relative;
+    background-size: 100%;
+}
+
+.helicopter{
+    width: 9.7vw;
+    height: 4.55vw;
+    position:relative;
+    padding-top: 4.16vw;
+    background-size: 100%;
+    opacity: 0;
+    transform: translate(2.3vw,0.42vw);
+}

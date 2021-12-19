@@ -30,6 +30,10 @@
     background-color: mediumpurple;
 }
 
+.visualizer .controller button:hover {
+    background-color: rebeccapurple;
+}
+
 .array_container {
     width: 49%;
     height: 34.5vw;

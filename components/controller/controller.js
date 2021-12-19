@@ -28,9 +28,9 @@ export default function Controller(props) {
             <button onClick={props.stop}>Backward</button>
             {props.paused ? <button onClick={props.playPause}>Play</button>
                     : <button onClick={props.playPause}>Pause</button>}
-            <button onClick={props.stop}>Forward</button>
+            <button onClick={() => location.reload()}>Forward</button>
             <button onClick={() => location.reload()}>Stop</button>
-            <button onClick={props.stop}>Finish</button>
+            <button onClick={() => location.reload()}>Finish</button>
             <div className={styles.speedSlider}>
                 <label>Speed:</label>
                 <Slider value={value} onChange={(e,val) => handleChange(e, val)}

@@ -1,0 +1,157 @@
+.full {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    margin-top: 6vw;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.array_display{
+    width: 100%;
+    height: 100%;
+    background: white;
+}
+
+.array_display button{
+    font-family: "Bowlby One SC", sans-serif;
+    font-size:1.3vw;
+}
+
+.array_full {
+    margin-top: 1vw;
+    text-align: center;
+    min-width: 50%;
+    height: 35.5vw;
+    border: solid 0.5vw orangered;
+}
+
+.array_info {
+    margin: 1vw 1vw;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    /*background: darkblue;*/
+}
+
+.array_info .infoText{
+    font-size: 1.2vw;
+    font-family: Candara, sans-serif;
+    font-weight: bold;
+}
+
+.array_container{
+    margin: 0.5vw 0;
+    text-align: center;
+    width: fit-content;
+    min-height: fit-content;
+}
+
+.array_box {
+    text-align: center;
+    width: 3.5vw;
+    height: 3vw;
+    background: dodgerblue;
+    font-family: "Bowlby One SC", sans-serif;
+    border: solid 2px darkblue;
+    padding:0.25vw 0;
+    overflow: hidden;
+    font-size:1.5vw;
+    animation: exam 5s infinite;
+}
+
+.Input{
+    width: 6vw;
+    height: 2.5vw;
+    color: dodgerblue;
+    font-size:1.3vw;
+    cursor: pointer;
+    margin-top: 0.6vw;
+    border-radius: 0.25vw;
+    border: solid 0.01vw black;
+    outline: none;
+}
+
+.Index{
+    height: 2.2vw;
+    width: 2.2vw;
+    font-size: 1.2vw;
+    font-weight: bold;
+    margin: 0.25vw 0;
+    padding: 0.25vw 0;
+    font-family: "Segoe UI",sans-serif;
+    display: inline-block;
+}
+
+.Circle{
+    height: 2.5vw;
+    width: 2.5vw;
+    border-radius: 50%;
+    border: solid 0.25vw red;
+    display: inline-block;
+    background: rgba(0,0,0,0);
+    position:relative;
+    opacity:0;
+    /*animation: drawCircle 10s 5s 1;*/
+}
+
+@keyframes drawCircle {
+    from{border: 0}
+    to{border: 0.25vw}
+}
+
+.Code_display{
+    margin-top: 1vw;
+    text-align: center;
+    min-width: 50%;
+    height: 35.5vw;
+    border: solid 0.5vw orangered;
+}
+
+.Code_display ::-webkit-scrollbar {
+    width: 0.5vw;
+    height: 0.5vw;
+}
+.Code_display ::-webkit-scrollbar-track {
+    /*box-shadow: inset 0 0 0.5vw;*/
+    background-color: #282c34;
+}
+.Code_display ::-webkit-scrollbar-thumb {
+    background: dodgerblue;
+    border-radius: 0.5vw;
+}
+.Code_display ::-webkit-scrollbar-thumb:hover {
+    background: orangered;
+}
+
+.info_display{
+    width: 100%;
+    height: 10vw;
+    margin-top: 1vw;
+    background-color: orangered;
+    font-family: "Segoe UI", sans-serif;
+    font-size: large;
+}
+
+@media (max-width: 1200px) {
+    .container{
+        flex-wrap: wrap;
+    }
+    .array_display {
+        width: 100%;
+    }
+    .array_box{
+        width: 5.5vw;
+    }
+    .Code_display{
+        width:100%;
+    }
+    .info_display{
+        width: 100%;
+    }
+}

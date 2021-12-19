@@ -16,6 +16,10 @@
     background-color: mediumpurple;
 }
 
+.controllerLayout button:hover {
+    background-color: rebeccapurple;
+}
+
 .speedSlider {
     display: grid;
     grid-template-columns: 25% 75%;
